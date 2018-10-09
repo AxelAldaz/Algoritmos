@@ -1,6 +1,15 @@
 package com.algoritmos;
 
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.PriorityQueue;
+import java.util.Random;
 import java.util.Scanner;
+import java.util.Stack;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
 
 public class AlgoritmosApp {
 
@@ -11,6 +20,7 @@ public class AlgoritmosApp {
 		int base;
 		int exp;
 		Ciclos ciclo = new Ciclos();
+		Arreglos arreglo = new Arreglos();
 		/*
 		System.out.println("Dame la base");
 		base = sc.nextInt();
@@ -82,14 +92,183 @@ public class AlgoritmosApp {
 		System.out.println("El numero invertido es: "+ciclo.invertirNumero(numero));
 	    */
 		
-		int x=0, y=0;
+		/*int x=0, y=0;
 		System.out.println("Ingresa un  numero");
 		x = sc.nextInt();			
 		ciclo.Adivinar(x, y);
+		*/
 		
-
+//		int arreglo[] = new int [10];
+//		Random rn = new Random();
+//		int n =0;
+//		
+//		for(int i=0;i<10;i++)
+//		{
+//			n = (int)(rn.nextDouble()*12)+1;
+//			arreglo[i] = n;
+//			arreglo[i]++;			
+//		}
+//		
+//		
+//		for(int i=0; i<10; i++){
+//		switch (arreglo[i])
+//		{
+//		case 1:System.out.println(arreglo[i]+" -> Enero");
+//			break;
+//		case 2:System.out.println(arreglo[i]+" -> Febrero");
+//			break;
+//		case 3:System.out.println(arreglo[i]+" -> Marzo");
+//			break;
+//		case 4:System.out.println(arreglo[i]+" -> Abril");
+//			break;
+//		case 5:System.out.println(arreglo[i]+" -> Mayo");
+//			break;
+//		case 6:System.out.println(arreglo[i]+" -> Junio");
+//			break;
+//		case 7:System.out.println(arreglo[i]+" -> Julio");
+//			break;
+//		case 8:System.out.println(arreglo[i]+" -> Agosto");
+//			break;
+//		case 9:System.out.println(arreglo[i]+" -> Septiembre");
+//			break;
+//		case 10:System.out.println(arreglo[i]+" -> Octubre");
+//			break;
+//		case 11:System.out.println(arreglo[i]+" -> Noviembre");
+//		break;
+//		case 12:System.out.println(arreglo[i]+" -> Diciembre");
+//		break;
+//		default: System.out.println("error");
+//		break;
+//			
+//		}
+//		}
+		
+	
+//		System.out.println("Ingresa un numero");
+//		num = sc.nextInt();
+//		long[] serie = new long[num];
+//		serie= arreglo.fibonacci(num);
+//		for(long num : serie)
+//			System.out.println(num);
+//		System.out.println("");
+		
+		
+		//PILAS
+//		Stack<String> pilas = new Stack<String>();
+//		pilas.push("Adal");
+//		pilas.push("Victor");
+//		pilas.push("Efren");
+//		pilas.push("La yadis");
+//		System.out.println("El tamaño: "+pilas.size());
+//		System.out.println("Ultimo elemento: "+pilas.peek());
+//		System.out.println("El tamaño: "+pilas.size());
+//		System.out.println("Ultimo elemento despues de peek: "+pilas.pop());
+//		System.out.println("El tamaño: "+pilas.size());
+//		System.out.println("Ultimo elemento despues de pop: "+pilas.peek());
+//		System.out.println("El indice 1: "+pilas.get(1));
+//		while(pilas.size()>0)
+//			System.out.println(pilas.pop());
+		
+//		//COLAS
+//		PriorityQueue<String> cola = new PriorityQueue<String>();
+//		cola.add("Ulises");
+//		cola.add("Pacheco");
+//		cola.add("Axel");
+//		cola.add("Chino");
+//		
+//		Iterator it = cola.iterator();
+//		while(it.hasNext()){
+//		   System.out.println(it.next());
+//		}
+//		//PEEK nos muestra el primer elemento de la cola
+//		System.out.println("El primero: "+cola.peek());
+//		//poll nos muestra el primer elemento de la cola y lo saca de ella
+//		System.out.println("El primero: "+cola.poll());
+//		System.out.println("El nuevo primero: "+cola.peek());
+//		//Contains nos dice si muestra cola contiene cierto elemento
+//		System.out.println("Contiene Ulises? "+cola.contains("Ulises"));
+//		System.out.println("Contiene Manu? "+cola.contains("Manu"));
+//		//Remove 
+//		cola.remove("Pacheco");
+	    
+		//TreeSet
+//		TreeSet<String> arbol = new TreeSet<String>();
+//		arbol.add("Mario");
+//		arbol.add("Cesar");
+//		arbol.add("Mario");
+//		arbol.add("Cesar");
+//		
+//		System.out.println("Elementos en el arbol: "+arbol.size());
+//		Iterator it = arbol.iterator();
+//		while(it.hasNext())
+//			System.out.println(it.next());
+//		
+//		System.out.println("Se agrego elemento Marco? "+arbol.add("Marco"));
+//		System.out.println("Se agrego elemento Cesar? "+arbol.add("Cesar"));
+//		
+//		//Remove
+//		arbol.remove("Marco");
+//		//Clear
+//		arbol.clear();
+		
+		//HASHtable contiene claves para cada una de sus enradas
+//		Hashtable<Integer, String> hash = new Hashtable<Integer, String>();
+//		hash.put(1,"Yareli");
+//		hash.put(2,"Alan");
+//		hash.put(3,"Manu");
+//		//Se recorre con Enumeration en lugar de Iterator
+//		Enumeration en = hash.keys();
+//		while(en.hasMoreElements()){
+//			int clave = (int)en.nextElement();
+//			System.out.println(clave+" - "+hash.get(clave));
+//		}
+//		hash.put(5,"Osvaldo");
+//		hash.put(4,"Alan");
+//		System.out.println("\n");
+//		System.out.println("Existe la clave 3? "+hash.containsKey(3));
+//		System.out.println("Existe la clave 4? "+hash.containsKey(4));
+//		System.out.println("\n");
+//		en= hash.keys();
+//		while(en.hasMoreElements()){
+//			int clave = (int)en.nextElement();
+//			System.out.println(clave+" - "+hash.get(clave));
+//		}
+		
+//		TreeMap<String, Integer> tmap = new TreeMap<>();
+//		tmap.put("Michelle", 90);
+//		tmap.put("Oscar", 95);
+//		tmap.put("Alan",91);
+//		tmap.put("Yareli", 89);
+//		Iterator it = tmap.keySet().iterator();
+//		while(it.hasNext())
+//		{
+//			String clave = (String)it.next();
+//			System.out.println(clave+"-->"+tmap.get(clave));
+//		}
+//		tmap.remove("Yareli");
+//		
+//		int[] arreglor = {1,2,3,4,5,6,7,8,9,0};
+//		for(int i : arreglor)
+//			System.out.print(i+ " ");
+//		System.out.println();
+//		arreglor = arreglo.recorrido(arreglor);
+//		for (int i: arreglor)
+//			System.out.print(i+ " ");
+		
+		Archivos archivo = new Archivos();
+		String lorem="";
+		
+		lorem = archivo.reemplazar("C:\\Users\\Axel Aldaz\\Desktop\\Prueba.txt");;
+	    System.out.println(lorem);
+	    archivo.Guardar("C:\\Users\\Axel Aldaz\\Desktop\\Prueba.txt", lorem);
+//		
+//	archivo.escribir("C:\\Users\\Axel Aldaz\\Desktop\\Escrito.txt","Que rosho!!");
+//	archivo.escribir("C:\\Users\\Axel Aldaz\\Desktop\\Escrito.txt","plebes!!");
+		
+		
+		
 	}
 	
-
+	
 }
 
