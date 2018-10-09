@@ -257,6 +257,7 @@ public class AlgoritmosApp {
 		
 		Archivos archivo = new Archivos();
 		String lorem="";
+		//////
 		
 		lorem = archivo.reemplazar("C:\\Users\\Axel Aldaz\\Desktop\\Prueba.txt");;
 	    System.out.println(lorem);
